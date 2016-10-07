@@ -1,7 +1,7 @@
 # Rails Bootcamp
 
 Todo list 
-* Rail Introducing
+* Rail Introducing -
 * Scaffold (CRUD)
 * Console
 * Relasi
