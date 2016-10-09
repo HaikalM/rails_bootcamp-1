@@ -1,6 +1,9 @@
-<h1>Halo#index</h1>
-<p>Find me in app/views/halo/index.html.erb</p>
-
-<% if @name %>
-<h3>Halo <%= @name %></h3>
-<% end %>
+<h1>Menu</h1>
+<ul>
+  <li>
+    <%= link_to "Mahasiswa (#{Student.count})", students_path %>
+  </li>
+  <li>
+    <%= link_to "Gender (#{Gender.count})", genders_path %>
+  </li>
+</ul>

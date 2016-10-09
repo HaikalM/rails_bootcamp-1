@@ -2,7 +2,8 @@
 
 Todo list 
 * Rail Introducing -
-* Scaffold (CRUD)
+* Scaffold (CRUD) -
+* Seeder
 * Console
 * Relasi
 * validasi
