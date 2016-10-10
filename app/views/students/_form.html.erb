@@ -12,25 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :npm %>
+    <%= f.label :npm,"NPM" %>
     <%= f.number_field :npm %>
   </div>
 
   <div class="field">
-    <%= f.label :name %>
+    <%= f.label :name,"Nama" %>
     <%= f.text_field :name %>
   </div>
-
+  
   <div class="field">
-    <%= f.label :placebirth %>
+    <%= f.label :gender_id,"Gender" %>
+    <%= f.collection_select(:gender_id,Gender.all,:id,:name,{:prompt => 'Pilih gender'}, :class=>"form-control")%>
+  </div>
+  <div class="field">
+    <%= f.label :placebirth,"Tempat Lahir" %>
     <%= f.text_field :placebirth %>
   </div>
 
   <div class="field">
-    <%= f.label :datebirth %>
+    <%= f.label :datebirth,"Tanggal Lahir" %>
     <%= f.date_select :datebirth %>
   </div>
-
+  <div class="field">
+    <%= f.label :bunch_id,"Angkatan" %>
+    <%= f.collection_select(:bunch_id,Bunch.all,:id,:name,{:prompt => 'Pilih angkatan'}, :class=>"form-control")%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
