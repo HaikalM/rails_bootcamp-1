@@ -25,10 +25,14 @@
   <%= @student.datebirth %>
 </p>
 
-
 <p>
   <strong>Angkatan:</strong>
   <%= @student.try(:bunch).try(:name) %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @student.try(:program).try(:program_name) %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
