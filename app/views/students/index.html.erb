@@ -9,6 +9,7 @@
       <th>Name</th>
       <th>Placebirth</th>
       <th>Datebirth</th>
+      <th>Bunch</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= student.name %></td>
         <td><%= student.placebirth %></td>
         <td><%= student.datebirth %></td>
+        <td><%= bunch.name %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

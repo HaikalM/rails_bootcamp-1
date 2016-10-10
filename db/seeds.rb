@@ -24,3 +24,8 @@
 # 	Faculty.create(faculty_code: "F#{n}",
 # 		faculty_name: "Faculty #{n}")
 # }
+
+1.upto(10) { |n|
+	Bunch.create(name: "Angkatan #{n}",
+				bunch_id: rand(1..10))
+}
