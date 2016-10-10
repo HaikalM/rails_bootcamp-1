@@ -5,17 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>No</th>
       <th>Npm</th>
       <th>Name</th>
       <th>Placebirth</th>
       <th>Datebirth</th>
       <th>Bunch</th>
-      <th>NPM</th>
-      <th>Nama</th>
-      <th>Gender</th>
-      <th>Tempat Lahir</th>
-      <th>Tanggal Lahir</th>
-      <th>Angkatan</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,7 +23,6 @@
         <td><%= student.try(:gender).try(:name).try(:upcase) %></td>
         <td><%= student.placebirth %></td>
         <td><%= student.datebirth %></td>
-        <td><%= bunch.name %></td>
         <td><%= student.try(:bunch).try(:name) %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>

@@ -35,8 +35,8 @@
     <%= f.date_select :datebirth %>
   </div>
   <div class="field">
-    <%= f.label :bunch_id,"Angkatan" %>
-    <%= f.collection_select(:bunch_id,Bunch.all,:id,:name,{:prompt => 'Pilih angkatan'}, :class=>"form-control")%>
+    <%= f.label :bunch_id,"Bunch" %>
+    <%= f.collection_select(:bunch_id,Bunch.all,:id,:name,{:prompt => 'Angkatan'}, :class=>"form-control")%> 
   </div>
   <div class="actions">
     <%= f.submit %>
