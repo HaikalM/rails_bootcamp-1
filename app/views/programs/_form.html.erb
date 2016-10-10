@@ -17,8 +17,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :program_name %>
+    <%= f.label :program_name, "Nama Prodi" %>
     <%= f.text_field :program_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :faculty_name %>
+    <%= f.collection_select(:faculty_id,Faculty.all,:id,:faculty_name,{:prompt => 'Pilih Fakultas'}, :class=>"form-control") %>
   </div>
 
   <div class="actions">
