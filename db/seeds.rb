@@ -25,3 +25,13 @@
 		faculty_id: rand(1..10))
 }
 
+1.upto(5){ |n|
+	Bunch.create(bunch_name: "#{n}",
+		brunch_id: rand(1..5))
+}
+
+# 1.upto(10){ |n|
+# 	Faculty.create(faculty_code: "F#{n}",
+# 		faculty_name: "Faculty #{n}")
+# }
+
