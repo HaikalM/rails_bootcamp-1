@@ -14,18 +14,19 @@
 #                  gender_id: rand(1..2))
 # end
 
+# 1.upto(10){ |n|
+#   Faculty.create(faculty_code: "F#{n}",
+#     faculty_name: "Faculty #{n}")
+# }
+
 11.upto(20){ |n|
 	Program.create(program_code: "P#{n}",
 		program_name: "Program #{n}",
 		faculty_id: rand(1..10))
 }
 
+
 # 1.upto(10){ |n|
 # 	Faculty.create(faculty_code: "F#{n}",
 # 		faculty_name: "Faculty #{n}")
 # }
-
-1.upto(10) { |n|
-	Bunch.create(name: "Angkatan #{n}",
-				bunch_id: rand(1..10))
-}

@@ -6,23 +6,33 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nama:</strong>
   <%= @student.name %>
 </p>
 
 <p>
-  <strong>Placebirth:</strong>
+  <strong>Gender:</strong>
+  <%= @student.gender.name.upcase %>
+</p>
+
+<p>
+  <strong>Tempat Lahir:</strong>
   <%= @student.placebirth %>
 </p>
 
 <p>
-  <strong>Datebirth:</strong>
+  <strong>Tanggal lahir:</strong>
   <%= @student.datebirth %>
 </p>
 
 <p>
+<<<<<<< HEAD
 	<strong>Bunch:</strong>
 	<%= @bunch.name %>
+=======
+  <strong>Angkatan:</strong>
+  <%= @student.try(:bunch).try(:name) %>
+>>>>>>> 602a656b38a2303bf472fdfb76c9806ce6d2077e
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
