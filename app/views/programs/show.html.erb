@@ -10,5 +10,10 @@
   <%= @program.program_name %>
 </p>
 
+<p>
+  <strong>Faculty name:</strong>
+  <%= @program.try(:faculty_name) %>
+</p>
+
 <%= link_to 'Edit', edit_program_path(@program) %> |
 <%= link_to 'Back', programs_path %>
