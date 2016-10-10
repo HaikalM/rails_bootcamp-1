@@ -24,6 +24,7 @@
         <td><%= student.placebirth %></td>
         <td><%= student.datebirth %></td>
         <td><%= student.try(:bunch).try(:name) %></td>
+        <td><%= student.try(:program).try(:program_name) %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

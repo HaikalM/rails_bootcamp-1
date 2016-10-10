@@ -34,6 +34,11 @@
     <%= f.label :datebirth,"Tanggal Lahir" %>
     <%= f.date_select :datebirth %>
   </div>
+
+  <div class="field">
+    <%= f.label :program, "Prodi" %>
+    <%= f.collection_select(:program_id,Program.all,:id,:program_name,{:prompt => 'Pilih Fakultas'}, :class => "form-control") %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
