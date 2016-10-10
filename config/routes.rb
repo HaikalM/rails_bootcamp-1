@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :faculties
+  resources :programs
   resources :bunches
   resources :genders
   resources :students
