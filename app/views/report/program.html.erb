@@ -1,0 +1,20 @@
+<h1>Laporan Prodi</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Prodi</th>
+      <th>Jumlah Mhs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @programs.each_with_index do |prodi,index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= prodi.program_name.upcase %></td>
+      <td><%= prodi.students.count %> Mahasiswa </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
