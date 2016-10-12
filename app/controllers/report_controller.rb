@@ -5,4 +5,12 @@ class ReportController < ApplicationController
   def program
     @programs = Program.all
   end
+
+  def gender
+  	@gender = Gender.all
+  end
+
+  def bunch
+  	@bunch = Bunch.all
+  end
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'report/gender'
+  get 'laporan/angkatan' => 'report#bunch'
+  get 'laporan/gender' => 'report#gender'
   get 'laporan/prodi' => 'report#program'
   resources :faculties
   resources :programs
