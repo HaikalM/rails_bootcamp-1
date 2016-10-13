@@ -17,6 +17,12 @@
       <td><%= link_to 'details', laporan_detail_fakultas_path(fakultas) %></td>
     </tr>
     <% end %>
+    <tr>
+        <td colspan="2">Total</td>
+        <td>
+          <%= Student.count %> Mahasiswa
+        </td>
+      </tr>
   </tbody>
 </table>
 <br />
