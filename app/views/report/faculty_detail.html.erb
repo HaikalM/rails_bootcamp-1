@@ -1,18 +1,4 @@
 <h1><%= @faculty_detail.faculty_name %><hr /></h1>
-<!-- 
-<h2>Gender</h2>
-<ul>
-	<% @e = Program.all.where(:faculty => @faculty_detail) %>
-	<li>
-		Laki-Laki : 
-		<%= Student.all.where(:gender => '1',:program => @e.min..@e.max).count %> Mahasiswa
-	</li>
-	<li>
-		Perempuan : 
-		<%= Student.all.where(:gender => '2',:program => @e.min..@e.max).count %> Mahasiswa
-	</li>
-</ul> -->
-
 <% @e = Program.all.where(:faculty => @faculty_detail) %>
 
 <h2>Gender</h2>
