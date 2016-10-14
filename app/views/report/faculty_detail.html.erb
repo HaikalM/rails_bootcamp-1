@@ -1,0 +1,34 @@
+<h1><%= @faculty_detail.faculty_name %></h1>
+
+<h3>Gender</h3>
+<ul>
+	<% @e = Program.all.where(:faculty => @faculty_detail) %>
+	<li>
+		Laki-Laki : 
+		<%= Student.all.where(:gender => '1',:program => @e.min..@e.max).count %>
+	</li>
+	<li>
+		Perempuan : 
+		<%= Student.all.where(:gender => '2',:program => @e.min..@e.max).count %>
+	</li>
+</ul>
+
+<h3>Angkatan</h3>
+<ul>
+	<% for bunch in Bunch.all %>
+		<li>
+			<%= bunch.name %> : 
+			<%= bunch.student.where(:program => @e.min..@e.max).count %>
+		</li>
+	<% end %>
+</ul>
+
+<h3>Prodi</h3>
+<ul>
+	<% for prodi in Program.all.where(:faculty => @faculty_detail) %>
+		<li>
+			<%= prodi.program_name %> : 
+			<%= prodi.students.where(:program => @e.min..@e.max).count %>
+		</li>
+	<% end%>
+</ul>

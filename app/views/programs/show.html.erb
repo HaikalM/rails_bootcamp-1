@@ -12,7 +12,7 @@
 
 <p>
   <strong>Faculty name:</strong>
-  <%= @program.try(:faculty_name) %>
+  <%= @program.try(:faculty).try(:faculty_name) %>
 </p>
 
 <%= link_to 'Edit', edit_program_path(@program) %> |

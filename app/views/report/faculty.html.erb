@@ -1,0 +1,23 @@
+<h1>Laporan Fakultas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Fakultas</th>
+      <th>Jumlah Mhs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @faculty.each_with_index do |fakultas,index| %>
+    <tr>
+      <td><%= index + 1 %></td>
+      <td><%= fakultas.faculty_name.upcase %></td>
+      <td><%= fakultas.students.count %> Mahasiswa </td>
+      <td><%= link_to 'details', laporan_detail_fakultas_path(fakultas) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br />
+<%= link_to 'Back', root_path %>
