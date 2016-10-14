@@ -6,6 +6,10 @@ class ReportController < ApplicationController
     @programs = Program.all
   end
 
+  def program_detail
+    @program = Program.find(params[:id])
+  end
+
   def gender
   	@gender = Gender.all
   end
@@ -13,4 +17,6 @@ class ReportController < ApplicationController
   def bunch
   	@bunch = Bunch.all
   end
+
+
 end
