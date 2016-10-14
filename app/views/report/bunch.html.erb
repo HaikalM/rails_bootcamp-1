@@ -10,17 +10,17 @@
 	</thead>
 
 	<tbody>
-		<% @bunch.each_with_index { |angkatan, index|%>
+		<% @bunch.each_with_index do |angkatan, index|%>
 			<tr>
 				<td><%= index + 1 %></td>
 				<td><%= angkatan.name.upcase %></td>
 				<td><%= angkatan.student.count %> Mahasiswa</td>
 			</tr>
-		<% } %>
+		<% end %>
 			<tr>
 				<td colspan="2">Total</td>
 				<td>
-					<%= Student.count %>
+					<%= @students_count %> Mahasiswa
 				</td>
 			</tr>
 	</tbody>

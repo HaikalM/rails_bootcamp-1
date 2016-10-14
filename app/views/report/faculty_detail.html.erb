@@ -1,32 +1,8 @@
-<h1><%= @faculty_detail.faculty_name %><hr /></h1>
-<% @e = Program.all.where(:faculty => @faculty_detail) %>
-
-<h2>Gender</h2>
-<ul>
-	<% for gender in Gender.all %>
-		<li>
-			<b><%= gender.name %></b> : 
-			<%= Student.all.where(:gender => gender.id,:program => @e.min..@e.max).count %> Mahasiswa
-		</li>
-	<% end %>
-</ul>
-
-<h2>Angkatan</h2>
-<ul>
-	<% for bunch in Bunch.all %>
-		<li>
-			<b><%= bunch.name %></b> : 
-			<%= bunch.student.where(:program => @e.min..@e.max).count %> Mahasiswa
-		</li>
-	<% end %>
-</ul>
+<h1><%= @faculty.faculty_name %><hr /></h1>
 
 <h2>Prodi</h2>
 <ul>
-	<% for prodi in Program.all.where(:faculty => @faculty_detail) %>
-		<li>
-			<b><%= prodi.program_name %></b> : 
-			<%= prodi.students.where(:program => @e.min..@e.max).count %> Mahasiswa
-		</li>
-	<% end%>
+	<% @programs.each_with_index  do |prodi, index| %>
+	<li><%= prodi.program_name %> = <%= prodi.students.count %> Mahasiswa</li>
+	<% end %>
 </ul>

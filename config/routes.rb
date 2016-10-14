@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'laporan/angkatan' => 'report#bunch'
   get 'laporan/gender' => 'report#gender'
   get 'laporan/prodi' => 'report#program'
+  
   resources :faculties
   resources :programs
   resources :bunches
