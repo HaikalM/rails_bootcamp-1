@@ -6,3 +6,19 @@
 	<li><%= prodi.program_name %> = <%= prodi.students.count %> Mahasiswa</li>
 	<% end %>
 </ul>
+
+<h2>Gender</h2>
+<ul>
+	<% @genders.each_with_index  do |jk, index| %>
+	<li><%= jk.name %> </li>
+	<% end %>
+</ul>  
+ 
+
+
+<h2>Angkatan</h2>
+<ul>
+	<% @bunches.each_with_index  do |angkatan, index| %>
+	<li><%= angkatan.name %> </li>
+	<% end %>
+</ul> 

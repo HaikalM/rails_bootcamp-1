@@ -19,13 +19,19 @@ class ReportController < ApplicationController
   	@faculties = Faculty.all
   end
 
+  def student
+    @programs = Program.all 
+  end
+
   def faculty_detail
   	@faculty = Faculty.find(params[:id])
     @programs = @faculty.programs
+    @genders = @faculty.name
+    @bunches = @faculty.bunches
+
   end
 
   private
-
     def get_student_count
       @students_count = Student.count
     end
