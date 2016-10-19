@@ -26,7 +26,7 @@ class ReportController < ApplicationController
   def faculty_detail
   	@faculty = Faculty.find(params[:id])
     @programs = @faculty.programs
-    @genders = @faculty.name
+    @genders = @faculty.genders
     @bunches = @faculty.bunches
 
   end

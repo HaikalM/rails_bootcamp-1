@@ -10,7 +10,7 @@
 <h2>Gender</h2>
 <ul>
 	<% @genders.each_with_index  do |jk, index| %>
-	<li><%= jk.name %> </li>
+	<li><%= jk.name%> = <%= jk.students.count %> Mahasiswa</li>
 	<% end %>
 </ul>  
  
