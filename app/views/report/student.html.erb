@@ -1,0 +1,30 @@
+<h3>Laporan Mahasiswa PerProgram Studi dan PerFakultas</h3>
+
+<table>
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Program Studi</th>
+			<th>Fakultas</th>
+			<th>Jumlah Mahasiswa</th>
+		
+		</tr>
+	</thead>
+	<tbody>
+		<% @programs.each_with_index do |prodi, index|%>
+		<tr>
+			<td><%= index + 1 %></td>
+			<td><%= prodi.program_name %></td>
+			<td><%= prodi.faculty.faculty_name %></td>
+			<td><%= prodi.students.count %> </td>
+		</tr>
+		<% end %>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>Total</td>
+			<td><%= Student.count %></td>
+		</tr>
+	</tbody>
+</table>
+
