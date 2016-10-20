@@ -9,7 +9,7 @@
 <h2>Jenis Kelamin</h2>
 <ul>
 	<% @genders.each_with_index  do |jk, index| %>
-	<li><%= jk.name%> = <%= @faculty.students.where(:gender_id => jk.id).count %> Mahasiswa</li>
+	<li><%= jk.name%> = <%= @faculty.genders(jk).count %> Mahasiswa</li>
 	<% end %>
 </ul>  
  
