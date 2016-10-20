@@ -3,6 +3,7 @@ require 'test_helper'
 class ProgramsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @program = programs(:one)
+    @faculty = faculties(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class ProgramsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create program" do
     assert_difference('Program.count') do
-      post programs_url, params: { program: { program_code: @program.program_code, program_name: @program.program_name } }
+      post programs_url, params: { program: { program_code: @program.program_code, program_name: @program.program_name, faculty_id: @faculty.id } }
     end
 
     assert_redirected_to program_url(Program.last)
