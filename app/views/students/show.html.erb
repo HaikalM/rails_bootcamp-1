@@ -12,7 +12,7 @@
 
 <p>
   <strong>Gender:</strong>
-  <%= @student.gender.name.upcase %>
+  <%= @student.gender.try(:name).try(:upcase) %>
 </p>
 
 <p>
