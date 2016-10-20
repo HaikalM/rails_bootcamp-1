@@ -1,10 +1,5 @@
 class ReportController < ApplicationController
-<<<<<<< HEAD
   before_action :get_student_count, only: [:gender, :bunch, :faculty]
-=======
-  before_action :get_student_count, only: [:gender, :bunch]
-
->>>>>>> a6233712ea326b821ace0d5d4dda1b569331226b
   def gender
   end
 

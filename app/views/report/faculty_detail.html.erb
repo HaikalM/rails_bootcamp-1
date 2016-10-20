@@ -1,37 +1,22 @@
 <h1><%= @faculty.faculty_name %><hr /></h1>
-<<<<<<< HEAD
 
 <h2>Gender</h2>
-=======
-<h2>Prodi</h2>
->>>>>>> a6233712ea326b821ace0d5d4dda1b569331226b
 <ul>
 	<% @genders.each_with_index  do |jk, index| %>
 	<li><%= jk.name %> = <%= @faculty.students.where(:gender => jk).count %> Mahasiswa</li>
 	<% end %>
 </ul>
 
-<<<<<<< HEAD
 <h2>Prodi</h2>
 <ul>
 	<% @programs.each_with_index  do |prodi, index| %>
 	<li><%= prodi.program_name %> = <%= prodi.students.count %> Mahasiswa</li>
-=======
-<h2>Jenis Kelamin</h2>
-<ul>
-	<% @genders.each_with_index  do |jk, index| %>
-	<li><%= jk.name%> = <%= @faculty.genders(jk).count %> Mahasiswa</li>
->>>>>>> a6233712ea326b821ace0d5d4dda1b569331226b
 	<% end %>
 </ul>
 
 <h2>Angkatan</h2>
 <ul>
 	<% @bunches.each_with_index  do |angkatan, index| %>
-<<<<<<< HEAD
 	<li><%= angkatan.name %> = <%= @faculty.students.where(:bunch => angkatan).count %> Mahasiswa</li>
-=======
-	<li><%= angkatan.name%> = <%= @faculty.students.where(:bunch_id => angkatan.id).count%> Mahasiswa </li>
->>>>>>> a6233712ea326b821ace0d5d4dda1b569331226b
 	<% end %>
 </ul> 
