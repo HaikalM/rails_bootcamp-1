@@ -1,5 +1,6 @@
-class ReportController 
-  < ApplicationController
+class ReportController < ApplicationController
+  before_action :get_student_count, only: [:gender, :bunch]
+
   def gender
   end
 
@@ -21,10 +22,23 @@ class ReportController
 
 
   def faculty
-  	@faculty = Faculty.all
+  	@faculties = Faculty.all
+  end
+
+  def student
+    @programs = Program.all 
   end
 
   def faculty_detail
-  	@faculty_detail = Faculty.find(params[:id])
+  	@faculty = Faculty.find(params[:id])
+    @programs = @faculty.programs
+    @genders = Gender.all
+    @bunches = Bunch.all
+
   end
+
+  private
+    def get_student_count
+      @students_count = Student.count
+    end
 end

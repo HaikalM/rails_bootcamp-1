@@ -5,18 +5,27 @@
     <tr>
       <th>No</th>
       <th>Fakultas</th>
+      <th>Jumlah Prodi</th>
       <th>Jumlah Mhs</th>
     </tr>
   </thead>
   <tbody>
-    <% @faculty.each_with_index do |fakultas,index| %>
+    <% @faculties.each_with_index do |fakultas,index| %>
     <tr>
       <td><%= index + 1 %></td>
       <td><%= fakultas.faculty_name.upcase %></td>
+      <td><%= fakultas.programs.count %></td>
       <td><%= fakultas.students.count %> Mahasiswa </td>
       <td><%= link_to 'details', laporan_detail_fakultas_path(fakultas) %></td>
+     <!--  <td><%= link_to 'details gender', laporan_detail_gender_path(fakultas) %></td> -->
     </tr>
     <% end %>
+    <tr>
+        <td colspan="2">Total</td>
+        <td>
+          <%= @students_count %> Mahasiswa
+        </td>
+      </tr>
   </tbody>
 </table>
 <br />

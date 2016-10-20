@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
   get 'laporan/faculty_detail/:id' => 'report#faculty_detail', as: "laporan_detail_fakultas"
+  get 'laporan/faculty_detail/:id' => 'report#faculty_detail_gender', as: "laporan_detail_gender"
   
   get 'laporan/fakultas' => 'report#faculty'
   get 'laporan/angkatan' => 'report#bunch'
   get 'laporan/gender' => 'report#gender'
   get 'laporan/prodi' => 'report#program'
+<<<<<<< HEAD
 
   get 'laporan/prodi/:id' => 'report#program_detail', as: :laporan_prodi_detail
+=======
+  get 'laporan/mahasiswa' => 'report#student'
+  
+>>>>>>> master
   resources :faculties
   resources :programs
   resources :bunches

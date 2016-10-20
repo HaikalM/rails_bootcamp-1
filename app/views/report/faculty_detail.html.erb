@@ -1,34 +1,25 @@
-<h1><%= @faculty_detail.faculty_name %></h1>
+<h1><%= @faculty.faculty_name %><hr /></h1>
 
-<h3>Gender</h3>
+%-  
+<h2>Prodi</h2>
 <ul>
-	<% @e = Program.all.where(:faculty => @faculty_detail) %>
-	<li>
-		Laki-Laki : 
-		<%= Student.all.where(:gender => '1',:program => @e.min..@e.max).count %>
-	</li>
-	<li>
-		Perempuan : 
-		<%= Student.all.where(:gender => '2',:program => @e.min..@e.max).count %>
-	</li>
-</ul>
-
-<h3>Angkatan</h3>
-<ul>
-	<% for bunch in Bunch.all %>
-		<li>
-			<%= bunch.name %> : 
-			<%= bunch.student.where(:program => @e.min..@e.max).count %>
-		</li>
+	<% @programs.each_with_index  do |prodi, index| %>
+	<li><%= prodi.program_name %> = <%= prodi.students.count %> Mahasiswa</li>
 	<% end %>
 </ul>
 
-<h3>Prodi</h3>
+<h2>Gender</h2>
 <ul>
-	<% for prodi in Program.all.where(:faculty => @faculty_detail) %>
-		<li>
-			<%= prodi.program_name %> : 
-			<%= prodi.students.where(:program => @e.min..@e.max).count %>
-		</li>
-	<% end%>
-</ul>
+	<% @genders.each_with_index  do |jk, index| %>
+	<li><%= jk.name%> = <%= jk.students.count %> Mahasiswa</li>
+	<% end %>
+</ul>  
+ 
+
+
+<h2>Angkatan</h2>
+<ul>
+	<% @bunches.each_with_index  do |angkatan, index| %>
+	<li><%= angkatan.name %> </li>
+	<% end %>
+</ul> 
