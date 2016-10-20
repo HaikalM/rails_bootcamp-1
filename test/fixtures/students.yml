@@ -5,9 +5,15 @@ one:
   name: MyString
   placebirth: MyString
   datebirth: 2016-10-07
+  gender: one
+  bunch: one
+  program: one
 
 two:
   npm: 1
   name: MyString
   placebirth: MyString
   datebirth: 2016-10-07
+  gender: two
+  bunch: two
+  program: two
