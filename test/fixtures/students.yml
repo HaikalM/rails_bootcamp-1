@@ -5,15 +5,15 @@ one:
   name: MyString
   placebirth: MyString
   datebirth: 2016-10-07
-  gender_id: one
-  bunch_id:
-  program_id:
+  gender: one
+  bunch: one
+  program: one
 
 two:
   npm: 1
   name: MyString
   placebirth: MyString
   datebirth: 2016-10-07
-  gender_id: two
-  bunch_id:
-  program_id:
+  gender: two
+  bunch: two
+  program: two
