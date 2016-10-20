@@ -3,7 +3,9 @@
 one:
   program_code: MyString
   program_name: MyString
+  faculty: one
 
 two:
   program_code: MyString
   program_name: MyString
+  faculty: two

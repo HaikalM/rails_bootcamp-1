@@ -35,7 +35,13 @@ class ProgramsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update program" do
-    patch program_url(@program), params: { program: { program_code: @program.program_code, program_name: @program.program_name } }
+    patch program_url(@program), params: 
+      { program: 
+        { program_code: @program.program_code, 
+          program_name: @program.program_name,
+          faculty_id: @program.faculty_id
+        } 
+      }
     assert_redirected_to program_url(@program)
   end
 
