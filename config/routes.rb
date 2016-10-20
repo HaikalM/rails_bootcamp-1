@@ -6,13 +6,9 @@ Rails.application.routes.draw do
   get 'laporan/angkatan' => 'report#bunch'
   get 'laporan/gender' => 'report#gender'
   get 'laporan/prodi' => 'report#program'
-<<<<<<< HEAD
-
   get 'laporan/prodi/:id' => 'report#program_detail', as: :laporan_prodi_detail
-=======
   get 'laporan/mahasiswa' => 'report#student'
-  
->>>>>>> master
+
   resources :faculties
   resources :programs
   resources :bunches
