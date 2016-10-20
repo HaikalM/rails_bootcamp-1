@@ -1,6 +1,4 @@
 <h1><%= @faculty.faculty_name %><hr /></h1>
-
-%-  
 <h2>Prodi</h2>
 <ul>
 	<% @programs.each_with_index  do |prodi, index| %>
@@ -8,10 +6,10 @@
 	<% end %>
 </ul>
 
-<h2>Gender</h2>
+<h2>Jenis Kelamin</h2>
 <ul>
 	<% @genders.each_with_index  do |jk, index| %>
-	<li><%= jk.name%> = <%= jk.students.count %> Mahasiswa</li>
+	<li><%= jk.name%> </strong> = <%= @faculty.students.where(:gender_id => jk.id).count %> Mahasiswa</li>
 	<% end %>
 </ul>  
  
