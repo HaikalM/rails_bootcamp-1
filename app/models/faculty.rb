@@ -1,8 +1,10 @@
 class Faculty < ApplicationRecord
 	has_many :programs 
-    has_many :students, :through=> :programs
+  has_many :students, :through=> :programs
 
-    has_many :genders, :through=> :students
-    has_many :bunches, :through=> :students
+  # tambah method gender untuk mengambil data gender tertentu berdasarkan fakultas
+  def genders(gender)
+    self.students.where(:gender => gender)
+  end
 end
 

@@ -24,6 +24,7 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show student" do
+
     get student_url(@student)
     assert_response :success
   end
@@ -34,7 +35,7 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update student" do
-    patch student_url(@student), params: { student: { datebirth: @student.datebirth, name: @student.name, npm: @student.npm, placebirth: @student.placebirth } }
+    patch student_url(@student), params: { student: { datebirth: @student.datebirth, name: @student.name, npm: @student.npm, placebirth: @student.placebirth, gender_id: @student.gender_id , bunch_id: @student.bunch_id ,program_id: @student.program_id } }
     assert_redirected_to student_url(@student)
   end
 

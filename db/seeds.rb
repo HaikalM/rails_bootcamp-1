@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-1.upto(200) do |n|
-  Student.create(npm: 16100700+ n,
-                 name: "Mahasiswa ke #{n}",
-                 placebirth: "Tempat Lahir mhs ke #{n}",
-                 datebirth: Date.today-200,
-                 gender_id: rand(1..2),
-                 bunch_id: rand(1..5),
-                 program_id: rand(1..10))
-end
+# 1.upto(100) do |n|
+#   Student.create(npm: 16100700+ n,
+#                  name: "Mahasiswa ke #{n}",
+#                  placebirth: "Tempat Lahir mhs ke #{n}",
+#                  datebirth: Date.today-200,
+#                  gender_id: rand(1..2),
+#                  bunch_id: rand(1..5),
+#                  program_id: rand(1..15))
+# end
 
 # 1.upto(10){ |n|
 #   Faculty.create(faculty_code: "F#{n}",
@@ -27,8 +27,8 @@ end
 # 		faculty_id: rand(1..10))
 # }
 
-# 1.upto(5){ |n|
-# 	Bunch.create(name: "#{n}")
+# 2.upto(7){ |n|
+# 	Bunch.create(name: "Angkatan 201#{n}/201#{n}")
 # }
 
 # 1.upto(10){ |n|
